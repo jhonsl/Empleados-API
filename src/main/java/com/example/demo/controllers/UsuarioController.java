@@ -47,9 +47,7 @@ public class UsuarioController {
         boolean ok = this.usuarioService.eliminarUsuario(id);
         if(ok){
             return "Se ha eliminado el Usuario con id: " + id;
-        }else{
-            return "No se ha eliminado el usuario con id: " + id;
         }
+        return "No se ha eliminado el usuario con id: " + id;
     }
-    
 }
