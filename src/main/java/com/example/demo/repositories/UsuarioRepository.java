@@ -13,4 +13,6 @@ public interface UsuarioRepository extends CrudRepository<UsuarioModel, Long>{
     public abstract ArrayList<UsuarioModel> findByPrioridad(Integer prioridad);
     //Agregamos un nuevo metodo abstracto para buscar por medio de los trabajos
     public abstract ArrayList<UsuarioModel> findByTrabajo(String trabajo);
+    //Agregamos un nuevo metodo abstracto para buscar por medio de los nombress
+    public abstract ArrayList<UsuarioModel> findByNombre(String trabajo);
 }

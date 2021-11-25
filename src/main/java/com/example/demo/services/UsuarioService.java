@@ -36,6 +36,11 @@ public class UsuarioService {
         return usuarioRepository.findByPrioridad(prioridad);
     }
 
+    //Le agregamos un metodo para obtener trabajadores con igual nombre
+    public ArrayList<UsuarioModel> obtenerPorNombre(String nombre){
+        return usuarioRepository.findByNombre(nombre);
+    }
+
     public boolean eliminarUsuario(Long id){
         try{
             usuarioRepository.deleteById(id);
