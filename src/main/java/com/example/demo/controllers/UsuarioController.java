@@ -31,7 +31,13 @@ public class UsuarioController {
         return this.usuarioService.obtenerPorId(id);
     }
 
+    //Agregamos una nueva filtracion por medio de un query, ahora los filtraremos por trabajo
     @GetMapping("/query")
+    public ArrayList<UsuarioModel> obtenerUsuariosPorTrabajo(@RequestParam("trabajo") String trabajo){
+        return this.usuarioService.obtenerPorTrabajo(trabajo);
+    }
+
+    @GetMapping("/query2")
     public ArrayList<UsuarioModel> obteneUsuarioPorPrioridad(@RequestParam("prioridad") Integer prioridad){
         return this.usuarioService.obtenerPorPriodidad(prioridad);
     }

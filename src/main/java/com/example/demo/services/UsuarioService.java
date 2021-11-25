@@ -27,6 +27,11 @@ public class UsuarioService {
         return usuarioRepository.findById(id);
     }
 
+    //Le agregamos la funcion de obtener los trabajadores de un determinado puesto
+    public ArrayList<UsuarioModel> obtenerPorTrabajo(String trabajo){
+        return usuarioRepository.findByTrabajo(trabajo);
+    }
+
     public ArrayList<UsuarioModel> obtenerPorPriodidad(Integer prioridad){
         return usuarioRepository.findByPrioridad(prioridad);
     }

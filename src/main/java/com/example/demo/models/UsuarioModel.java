@@ -13,6 +13,7 @@ public class UsuarioModel {
 
     private String nombre;
     private String email;
+    private String trabajo; //Le agregamos un cargo a ciertos trabajadores
     private Integer prioridad;
 
     public void setId(Long id){
@@ -27,7 +28,11 @@ public class UsuarioModel {
         this.email = email;
     }
 
-    public void setPriority(Integer prioridad){
+    public void setTrabajo(String trabajo){ //Agregamos el respectivo Setter
+        this.trabajo = trabajo;
+    }
+
+    public void setPrioridad(Integer prioridad){
         this.prioridad = prioridad;
     }
 
@@ -35,7 +40,7 @@ public class UsuarioModel {
         return this.id;
     }
 
-    public String getName(){
+    public String getNombre(){
         return this.nombre;
     }
 
@@ -43,7 +48,11 @@ public class UsuarioModel {
         return this.email;
     }
 
-    public Integer getPriority(){
+    public String getTrabajo(){ //Agregamos el respectivo Getter
+        return this.trabajo;
+    }
+
+    public Integer getPrioridad(){
         return this.prioridad;
     }
 }
